@@ -52,7 +52,7 @@ const translations = {
       welcomeContent: '<p>Use <strong>WASD</strong> or the <strong>arrow keys</strong> to move. Walk near a building and press <strong>E</strong> to open that section.</p><div class="grid-2"><div class="card"><h3>What changed</h3><ul><li>Illustrated scenery for easier navigation</li><li>Icon-based building identities</li><li>Side legend for first-time visitors</li><li>Clearer section hierarchy</li></ul></div><div class="card"><h3>Next upgrade options</h3><ul><li>Replace shapes with custom pixel art</li><li>Add your real GitHub / LinkedIn / resume links</li><li>Use your brand colors</li><li>Convert this into a multi-file Pages project</li></ul></div></div>',
       welcomeActions: [{ label: 'Start Exploring', type: 'close' }]
     },
-    skills: ['Python', 'Go', 'MATLAB/Simulink', 'ROS', 'CANalyzer', 'ETAS INCA', 'HIL/SIL', 'Raspberry Pi', 'IoT', 'Computer Vision'],
+    skills: ['Python', 'Linux (CLI/Operations)', 'Go', 'MATLAB/Simulink', 'ROS', 'CANalyzer', 'ETAS INCA', 'HIL/SIL', 'Raspberry Pi', 'IoT', 'Computer Vision'],
     buildings: {
       about: {
         name: 'About Me',
@@ -79,7 +79,7 @@ const translations = {
         name: 'Skill Forge',
         subtitle: 'Technical stack',
         summary: 'Software, validation, IoT, and analysis',
-        content: '<div class="grid-2"><div class="card"><h3>Embedded / Controls</h3><ul><li>MATLAB / Simulink</li><li>Control logic validation</li><li>HIL / SIL concepts</li><li>CAN-based measurement workflows</li></ul></div><div class="card"><h3>Programming</h3><ul><li>Python</li><li>Go</li><li>C</li><li>JavaScript basics for web presentation</li></ul></div><div class="card"><h3>IoT / Systems</h3><ul><li>Raspberry Pi</li><li>Wi-SUN / Echonet Lite</li><li>Sensor integration</li><li>Dashboard prototyping</li></ul></div><div class="card"><h3>ML / Vision</h3><ul><li>ROS</li><li>OpenCV</li><li>Dataset creation</li><li>Model training workflows</li></ul></div></div>',
+        content: '<div class="grid-2"><div class="card"><h3>Embedded / Controls</h3><ul><li>MATLAB / Simulink</li><li>Control logic validation</li><li>HIL / SIL concepts</li><li>CAN-based measurement workflows</li></ul></div><div class="card"><h3>Programming</h3><ul><li>Python</li><li>Linux command-line operations</li><li>Go</li><li>C</li><li>JavaScript basics for web presentation</li></ul></div><div class="card"><h3>IoT / Systems</h3><ul><li>Raspberry Pi</li><li>Wi-SUN / Echonet Lite</li><li>Sensor integration</li><li>Dashboard prototyping</li></ul></div><div class="card"><h3>ML / Vision</h3><ul><li>ROS</li><li>OpenCV</li><li>Dataset creation</li><li>Model training workflows</li></ul></div></div>',
         actions: [{ label: 'Close', type: 'close' }]
       },
       contact: {
@@ -116,7 +116,7 @@ const translations = {
       welcomeContent: '<p><strong>WASD</strong> または <strong>矢印キー</strong> で移動します。建物の近くで <strong>E</strong> を押すと、そのセクションが開きます。</p><div class="grid-2"><div class="card"><h3>今回の改善点</h3><ul><li>風景イラストで迷いにくい</li><li>建物ごとのアイコンで役割が明確</li><li>初見向けのガイドを追加</li><li>セクション構成を整理</li></ul></div><div class="card"><h3>次の強化案</h3><ul><li>独自ピクセルアートに置き換え</li><li>GitHub / LinkedIn / 履歴書の実リンク追加</li><li>ブランドカラーへ変更</li><li>GitHub Pages 用の複数ファイル構成へ移行</li></ul></div></div>',
       welcomeActions: [{ label: '探索を始める', type: 'close' }]
     },
-    skills: ['Python', 'Go', 'MATLAB/Simulink', 'ROS', 'CANalyzer', 'ETAS INCA', 'HIL/SIL', 'Raspberry Pi', 'IoT', '画像認識'],
+    skills: ['Python', 'Linux操作 (CLI)', 'Go', 'MATLAB/Simulink', 'ROS', 'CANalyzer', 'ETAS INCA', 'HIL/SIL', 'Raspberry Pi', 'IoT', '画像認識'],
     buildings: {
       about: {
         name: 'About Me',
@@ -143,7 +143,7 @@ const translations = {
         name: 'Skill Forge',
         subtitle: '技術スタック',
         summary: 'ソフトウェア、検証、IoT、分析',
-        content: '<div class="grid-2"><div class="card"><h3>組み込み / 制御</h3><ul><li>MATLAB / Simulink</li><li>制御ロジック検証</li><li>HIL / SIL の基礎</li><li>CAN 計測ワークフロー</li></ul></div><div class="card"><h3>プログラミング</h3><ul><li>Python</li><li>Go</li><li>C</li><li>Web 表示用の JavaScript</li></ul></div><div class="card"><h3>IoT / システム</h3><ul><li>Raspberry Pi</li><li>Wi-SUN / Echonet Lite</li><li>センサー統合</li><li>ダッシュボード試作</li></ul></div><div class="card"><h3>ML / 画像認識</h3><ul><li>ROS</li><li>OpenCV</li><li>データセット作成</li><li>学習ワークフロー</li></ul></div></div>',
+        content: '<div class="grid-2"><div class="card"><h3>組み込み / 制御</h3><ul><li>MATLAB / Simulink</li><li>制御ロジック検証</li><li>HIL / SIL の基礎</li><li>CAN 計測ワークフロー</li></ul></div><div class="card"><h3>プログラミング</h3><ul><li>Python</li><li>Linux操作（コマンドライン）</li><li>Go</li><li>C</li><li>Web 表示用の JavaScript</li></ul></div><div class="card"><h3>IoT / システム</h3><ul><li>Raspberry Pi</li><li>Wi-SUN / Echonet Lite</li><li>センサー統合</li><li>ダッシュボード試作</li></ul></div><div class="card"><h3>ML / 画像認識</h3><ul><li>ROS</li><li>OpenCV</li><li>データセット作成</li><li>学習ワークフロー</li></ul></div></div>',
         actions: [{ label: '閉じる', type: 'close' }]
       },
       contact: {
