@@ -1,7 +1,7 @@
 # Interactive Portfolio Town
 
 [![日本語README](https://img.shields.io/badge/README-日本語-0ea5e9?style=for-the-badge)](README.ja.md)
-[![Open Live Site](https://img.shields.io/badge/Open-Live%20Site-22c55e?style=for-the-badge)](https://tm-project20203.github.io/Profile/)
+[![Open Live Site](https://img.shields.io/badge/Open-Live%20Site-22c55e?style=for-the-badge)](https://tm-project20203.github.io/profile/)
 
 A game-style portfolio website built with plain HTML, CSS, and JavaScript.
 

@@ -1,7 +1,7 @@
 # Interactive Portfolio Town
 
 [English README](README.md)
-[![サイトを開く](https://img.shields.io/badge/%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%96%8B%E3%81%8F-Live%20Site-22c55e?style=for-the-badge)](https://tm-project20203.github.io/Profile/)
+[![サイトを開く](https://img.shields.io/badge/%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E9%96%8B%E3%81%8F-Live%20Site-22c55e?style=for-the-badge)](https://tm-project20203.github.io/profile/)
 
 HTML、CSS、JavaScript で作成したゲーム風ポートフォリオサイトです。
 
