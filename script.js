@@ -8,6 +8,7 @@ const modalActions = document.getElementById('modalActions');
 const closeModalBtn = document.getElementById('closeModal');
 const helpBtn = document.getElementById('helpBtn');
 const langBtn = document.getElementById('langBtn');
+const fullscreenBtn = document.getElementById('fullscreenBtn');
 const interactionHint = document.getElementById('interactionHint');
 const hudLocation = document.getElementById('hudLocation');
 const hudPrompt = document.getElementById('hudPrompt');
@@ -30,6 +31,9 @@ const translations = {
   en: {
     ui: {
       howToPlay: 'How to Play',
+      fullscreenEnter: 'Fullscreen',
+      fullscreenExit: 'Exit Fullscreen',
+      fullscreenUnavailable: 'Fullscreen N/A',
       close: 'Close',
       switchLang: '日本語',
       location: 'Location',
@@ -94,6 +98,9 @@ const translations = {
   ja: {
     ui: {
       howToPlay: '遊び方',
+      fullscreenEnter: '全画面表示',
+      fullscreenExit: '全画面終了',
+      fullscreenUnavailable: '全画面非対応',
       close: '閉じる',
       switchLang: 'English',
       location: '現在地',
@@ -210,6 +217,7 @@ function setSidePanel() {
   hudPrompt.textContent = t.ui.moveHint;
   langBtn.textContent = t.ui.switchLang;
   helpBtn.textContent = t.ui.howToPlay;
+  updateFullscreenButtonLabel();
   closeModalBtn.textContent = t.ui.close;
   compassLabel.textContent = t.ui.compass;
 
@@ -243,6 +251,68 @@ function setSidePanel() {
     span.textContent = skill;
     skillsList.appendChild(span);
   });
+}
+
+function isFullscreenSupported() {
+  return Boolean(document.fullscreenEnabled || document.webkitFullscreenEnabled);
+}
+
+function isFullscreenActive() {
+  return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+}
+
+function updateFullscreenButtonLabel() {
+  if (!fullscreenBtn) {
+    return;
+  }
+  const t = translations[lang].ui;
+  if (!isFullscreenSupported()) {
+    fullscreenBtn.textContent = t.fullscreenUnavailable;
+    fullscreenBtn.disabled = true;
+    return;
+  }
+  fullscreenBtn.disabled = false;
+  fullscreenBtn.textContent = isFullscreenActive() ? t.fullscreenExit : t.fullscreenEnter;
+}
+
+function requestAppFullscreen() {
+  const root = document.documentElement;
+  if (root.requestFullscreen) {
+    return root.requestFullscreen();
+  }
+  if (root.webkitRequestFullscreen) {
+    root.webkitRequestFullscreen();
+    return Promise.resolve();
+  }
+  return Promise.reject(new Error('Fullscreen not supported'));
+}
+
+function exitAppFullscreen() {
+  if (document.exitFullscreen) {
+    return document.exitFullscreen();
+  }
+  if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+    return Promise.resolve();
+  }
+  return Promise.reject(new Error('Fullscreen exit not supported'));
+}
+
+async function toggleFullscreen() {
+  if (!isFullscreenSupported()) {
+    return;
+  }
+  try {
+    if (isFullscreenActive()) {
+      await exitAppFullscreen();
+    } else {
+      await requestAppFullscreen();
+    }
+  } catch (error) {
+    console.error('Failed to toggle fullscreen mode:', error);
+  } finally {
+    updateFullscreenButtonLabel();
+  }
 }
 
 function openWelcome() {
@@ -596,6 +666,7 @@ window.addEventListener('keyup', (event) => {
 
 closeModalBtn.addEventListener('click', closeModal);
 helpBtn.addEventListener('click', openWelcome);
+fullscreenBtn.addEventListener('click', toggleFullscreen);
 langBtn.addEventListener('click', () => {
   lang = lang === 'en' ? 'ja' : 'en';
   setSidePanel();
@@ -603,6 +674,9 @@ langBtn.addEventListener('click', () => {
     openWelcome();
   }
 });
+
+document.addEventListener('fullscreenchange', updateFullscreenButtonLabel);
+document.addEventListener('webkitfullscreenchange', updateFullscreenButtonLabel);
 
 setSidePanel();
 openWelcome();
