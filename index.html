@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaito Tamura | Game Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="game-shell">
+      <section class="game-card">
+        <div class="topbar">
+          <div class="brand">
+            <h1>Kaito Tamura | Interactive Portfolio</h1>
+            <p>Walk around the illustrated town and press <strong>E</strong> to explore projects, skills, and experience.</p>
+          </div>
+          <div class="actions">
+            <button id="langBtn">日本語</button>
+            <button class="primary-btn" id="helpBtn">How to Play</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="960" height="600" aria-label="Interactive portfolio game"></canvas>
+          <div class="hud">
+            <div class="hud-chip" id="hudLocation">Location: Town Square</div>
+            <div class="hud-right">
+              <div class="hud-chip" id="hudPrompt">Move: WASD / Arrows ・ Interact: E</div>
+              <div class="compass" id="compassLabel">N ↑</div>
+            </div>
+          </div>
+          <div class="interaction" id="interactionHint"></div>
+        </div>
+      </section>
+
+      <aside class="side-card">
+        <h2 id="sideTitle">Portfolio Overview</h2>
+        <p class="muted" id="sideBody"></p>
+
+        <div class="mini-list" id="miniList"></div>
+
+        <div class="section-block">
+          <h3 id="legendTitle">Landmark Guide</h3>
+          <p class="muted" id="legendBody"></p>
+          <div class="legend-grid" id="legendGrid"></div>
+        </div>
+
+        <div class="section-block">
+          <h3 id="skillsTitle">Core Skills</h3>
+          <div class="skills" id="skillsList"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="modalTitle">Welcome</h2>
+          <p class="muted" id="modalSubtitle"></p>
+        </div>
+        <button id="closeModal">Close</button>
+      </div>
+      <div id="modalContent"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
