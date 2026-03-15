@@ -86,7 +86,7 @@ const translations = {
         name: 'Contact Station',
         subtitle: 'Links and next steps',
         summary: 'Add your real links before publishing',
-        content: '<div class="grid-2"><div class="card"><h3>Suggested links</h3><ul><li><a href="https://github.com/tm-project20203">GitHub</a> - https://github.com/tm-project20203</li><li><a href="https://www.linkedin.com/in/tm-project20203">LinkedIn</a> - https://www.linkedin.com/in/tm-project20203</li></ul></div><div class="card"><h3>Publishing checklist</h3><ul><li>Replace placeholder links</li><li>Add your email or contact form</li><li>Customize colors and copy</li><li>Deploy on GitHub Pages</li></ul></div></div>',
+        content: '<div class="grid-2"><div class="card"><h3>Suggested links</h3><ul><li><a href="https://github.com/tm-project20203">GitHub</a> - https://github.com/tm-project20203</li><li><a href="https://www.linkedin.com/in/kaito-tamura-7202002aa/">LinkedIn</a> - https://www.linkedin.com/in/kaito-tamura-7202002aa/</li></ul></div><div class="card"><h3>Publishing checklist</h3><ul><li>Replace placeholder links</li><li>Add your email or contact form</li><li>Customize colors and copy</li><li>Deploy on GitHub Pages</li></ul></div></div>',
         actions: [{ label: 'Close', type: 'close' }]
       }
     }
