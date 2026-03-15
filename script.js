@@ -261,7 +261,12 @@ function isFullscreenActive() {
   return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
 }
 
+function syncFullscreenLayoutState() {
+  document.body.classList.toggle('fullscreen-active', isFullscreenActive());
+}
+
 function updateFullscreenButtonLabel() {
+  syncFullscreenLayoutState();
   if (!fullscreenBtn) {
     return;
   }
